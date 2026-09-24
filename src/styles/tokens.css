@@ -1,0 +1,40 @@
+:root {
+  --bg: #efeae1;
+  --surface: #f7f4ee;
+  --ink: #1c1916;
+  --muted: #5e574e;
+  --line: #d8d0c4;
+  --stamp: #8f2d1b;
+  --stamp-ink: #f7f4ee;
+  --stamp-deep: #6f2214;
+  --ok: #1d5c38;
+  --ok-bg: #e5f0e8;
+  --bad-bg: #f8e8e4;
+  --mark: #e7d7a8;
+  --sans: "Source Sans 3", "Hiragino Sans", "Noto Sans JP", "Yu Gothic", sans-serif;
+  --serif: "Source Serif 4", "Noto Sans JP", serif;
+  --jp: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { min-height: 100%; }
+body {
+  margin: 0;
+  border-top: 4px solid var(--stamp);
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.5;
+  font-synthesis: none;
+}
+button, input { font: inherit; color: inherit; }
+button { cursor: pointer; }
+h1, h2, p, dl { margin: 0; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+a { color: var(--stamp); }
+a:visited { color: var(--stamp); }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+::selection { background: var(--mark); color: var(--ink); }
+.note { color: var(--muted); max-width: 40rem; }
+.jp { font-family: var(--jp); }

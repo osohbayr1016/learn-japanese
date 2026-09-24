@@ -1,0 +1,35 @@
+.sheet { width: 100%; border-collapse: collapse; }
+.sheet th, .sheet td {
+  padding: 8px 12px 8px 0;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: baseline;
+  font-weight: 400;
+}
+.sheet th { color: var(--muted); font-size: 14px; font-weight: 600; }
+.sheet td.jp { font-size: 18px; }
+.sheet tr.is-current td { background: var(--mark); }
+.ledger {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.ledger div { padding: 16px 16px 16px 0; }
+.ledger div + div { border-left: 1px solid var(--line); padding-left: 16px; }
+.ledger dt { color: var(--muted); font-size: 14px; }
+.ledger dd {
+  margin: 8px 0 0;
+  font-size: 22px;
+  font-variant-numeric: tabular-nums;
+}
+.big-row { display: flex; flex-wrap: wrap; gap: 16px; }
+.big-row div { width: 64px; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.big-char { font-family: var(--jp); font-size: 48px; line-height: 1; }
+.big-read { color: var(--muted); }
+.clear-row { display: flex; gap: 8px; align-items: center; }
+@media (max-width: 800px) {
+  .ledger { grid-template-columns: 1fr; }
+  .ledger div + div { border-left: 0; border-top: 1px solid var(--line); padding-left: 0; }
+}

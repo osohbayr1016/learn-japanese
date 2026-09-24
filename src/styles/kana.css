@@ -1,0 +1,61 @@
+.kana-layout {
+  display: grid;
+  grid-template-columns: auto minmax(220px, 280px);
+  gap: 32px;
+  align-items: start;
+}
+.kana-line {
+  display: grid;
+  grid-template-columns: 40px repeat(5, 60px);
+  gap: 8px;
+  align-items: center;
+}
+.kana-line + .kana-line { margin-top: 8px; }
+.kana-label { color: var(--muted); font-size: 14px; }
+.kana-blank { width: 60px; height: 68px; }
+.kana-cell {
+  width: 60px;
+  height: 68px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: var(--surface);
+  padding: 4px;
+}
+.kana-cell .glyph { font-family: var(--jp); font-size: 22px; line-height: 1; }
+.kana-cell .read { font-size: 13px; line-height: 1; color: var(--muted); }
+.kana-cell:hover { background: var(--bg); }
+.kana-line.is-current .kana-cell:not(.is-selected) { background: var(--mark); }
+.kana-cell.is-known:not(.is-selected),
+.kana-cell.is-known:not(.is-selected) .read { color: var(--ok); }
+.kana-cell.is-selected,
+.kana-cell.is-selected .read {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--stamp-ink);
+}
+.panel {
+  position: sticky;
+  top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: var(--surface);
+}
+.panel-char { font-family: var(--jp); font-size: 56px; line-height: 1; }
+.panel-read { font-size: 18px; }
+.pair { font-family: var(--jp); font-size: 18px; }
+.panel-block { display: flex; flex-direction: column; gap: 4px; }
+.panel h2 { font-family: var(--sans); font-size: 14px; font-weight: 600; color: var(--muted); }
+@media (max-width: 800px) {
+  .kana-layout { grid-template-columns: 1fr; }
+  .kana-board { overflow-x: auto; }
+  .panel { position: static; }
+}
