@@ -1,0 +1,27 @@
+.drill { width: 100%; max-width: 560px; }
+.prompt-char {
+  font-family: var(--jp);
+  font-size: 64px;
+  line-height: 1;
+}
+.options { display: flex; flex-direction: column; gap: 8px; width: 100%; }
+.drill-option {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: var(--surface);
+  text-align: left;
+}
+.drill-option:hover:not(:disabled) { background: var(--bg); }
+.drill-option:disabled { cursor: default; }
+.drill-option.is-correct:disabled {
+  background: var(--ok-bg);
+  border-color: var(--ok);
+  color: var(--ink);
+}
+.drill-option.is-wrong:disabled {
+  background: var(--bad-bg);
+  border-color: var(--stamp);
+  color: var(--ink);
+}

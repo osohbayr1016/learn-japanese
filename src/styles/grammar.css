@@ -1,0 +1,44 @@
+.lesson-index { width: 100%; border-bottom: 1px solid var(--line); }
+.lesson-index a {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 16px;
+  padding: 16px 8px;
+  margin: 0 -8px;
+  border-top: 1px solid var(--line);
+  color: inherit;
+  text-decoration: none;
+}
+.lesson-index a:visited { color: inherit; }
+.lesson-index a:hover { background: var(--mark); }
+.lesson-index .num { color: var(--muted); font-variant-numeric: tabular-nums; }
+.lesson-index strong { display: block; font-size: 18px; font-weight: 600; }
+.lesson-index small { display: block; margin-top: 4px; color: var(--muted); }
+.examples { width: 100%; border-top: 1px solid var(--line); }
+.examples li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+.examples .jp { font-family: var(--jp); font-size: 20px; }
+.callout {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: var(--surface);
+}
+.callout h2 { font-family: var(--sans); font-size: 16px; }
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
